@@ -12,6 +12,7 @@ jobs:
   tests:
     name: PHP ${{ matrix.php }}
     runs-on: ubuntu-latest
+    if: hashFiles('composer.json') != ''
     strategy:
       fail-fast: false
       matrix:
@@ -28,6 +29,7 @@ jobs:
   quality:
     name: PHPStan and code style
     runs-on: ubuntu-latest
+    if: hashFiles('composer.json') != ''
     steps:
       - uses: actions/checkout@v4
       - uses: shivammathur/setup-php@v2
