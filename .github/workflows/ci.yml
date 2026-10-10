@@ -12,7 +12,7 @@ jobs:
   tests:
     name: PHP ${{ matrix.php }}
     runs-on: ubuntu-latest
-    if: hashFiles('composer.json') != ''
+    if: github.repository != 'Stefan39/php-repo-template'
     strategy:
       fail-fast: false
       matrix:
@@ -29,7 +29,7 @@ jobs:
   quality:
     name: PHPStan and code style
     runs-on: ubuntu-latest
-    if: hashFiles('composer.json') != ''
+    if: github.repository != 'Stefan39/php-repo-template'
     steps:
       - uses: actions/checkout@v4
       - uses: shivammathur/setup-php@v2
