@@ -1,16 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
-  "timezone": "Europe/Berlin",
-  "schedule": ["before 6am on monday"],
+  "extends": ["config:recommended", "helpers:pinGitHubActionDigests", ":semanticCommits"],
+  "rangeStrategy": "widen",
   "packageRules": [
-    {
-      "matchManagers": ["github-actions"],
-      "groupName": "GitHub Actions"
-    },
-    {
-      "matchDepTypes": ["require-dev"],
-      "groupName": "dev dependencies"
-    }
+    { "matchDepTypes": ["require-dev"], "automerge": true },
+    { "matchManagers": ["github-actions"], "automerge": true }
   ]
 }

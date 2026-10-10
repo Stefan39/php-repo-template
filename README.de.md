@@ -1,42 +1,36 @@
-# <package-name>
+<!-- Vorlage: alle {{…}} ersetzen. Abschnitte, die nicht passen, löschen. -->
+# {{project-name}}
 
-> Ein Satz: Welches Problem das löst und für wen.
+> {{Ein Satz: was es für wen tut. Beispiel: „Fragen Sie Claude nach Ihren offenen Rechnungen — ein lesender MCP-Server für Lexware Office, in PHP.“}}
 
-[![CI](https://github.com/Stefan39/<repo>/actions/workflows/ci.yml/badge.svg)](https://github.com/Stefan39/<repo>/actions/workflows/ci.yml)
-[![Letzte Version](https://img.shields.io/packagist/v/stefan39/<package>.svg)](https://packagist.org/packages/stefan39/<package>)
-[![Lizenz: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[English version](README.md)
 
-[English](README.md) | Deutsch
+<p align="center">
+  <img src="docs/demo/demo.gif" alt="{{Was das GIF zeigt}}" width="720">
+</p>
 
-![Demo](assets/demo.gif)
+## Wofür?
 
-## Warum dieses Projekt
-
-Was es schon gibt (2-3 Projekte verlinken) und was hier anders ist. Nur belegbare Aussagen.
+{{2–4 Sätze aus Sicht eines Betriebs, ohne Fachjargon: welches Problem, welcher Nutzen.}}
 
 ## Schnellstart
 
 ```bash
-composer require stefan39/<package>
+composer require {{vendor}}/{{package}}
 ```
 
-```php
-// Kleinstes lauffähiges Beispiel (zum Kopieren).
-```
+{{Minimales Beispiel.}}
 
-## Voraussetzungen
+## Unterschied zu anderen Lösungen
 
-- PHP >= 8.3 (getestet bis 8.5)
-- Symfony 7.4 / 8.x (bei einem Bundle)
+{{Ehrlich, nur Belegbares.}}
 
-## Status
+## Über
 
-<!-- Nur wenn belegt: "Läuft produktiv auf www.jacomeit.de seit <Datum>." Sonst Abschnitt löschen. -->
+Entwickelt und gepflegt von [Stefan Jacomeit](https://www.jacomeit.de) aus Bremerhaven — freiberuflicher PHP/Symfony-Entwickler, KI-Integrationen für Unternehmen. Ausführliche Erklärung mit Praxisbeispiel: {{Link zur Erklärseite auf https://www.jacomeit.de}}
 
-## Mitmachen
-
-Issues und Pull Requests sind willkommen, siehe [CONTRIBUTING.md](CONTRIBUTING.md). Sicherheitsprobleme: [SECURITY.md](SECURITY.md).
+{{Markenhinweis, falls nötig.}}
 
 ## Lizenz
 
-[MIT](LICENSE) © Stefan Jacomeit — [www.jacomeit.de](https://www.jacomeit.de)
+[MIT](LICENSE). Die englische README ist maßgeblich.
