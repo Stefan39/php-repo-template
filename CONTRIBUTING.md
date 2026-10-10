@@ -1,32 +1,31 @@
 # Contributing
 
-Thanks for your interest. Small, focused changes are the easiest to review.
+Thanks for taking the time! Issues and pull requests in English or German are welcome.
 
-## Before you start
+## Before you open an issue
 
-- Open an issue first for anything bigger than a bug fix or a typo, so we can agree on the approach.
-- Issues in English or German are fine. Replies are usually in English.
-
-## Development
-
-```bash
-composer install
-composer tests        # PHPUnit
-composer phpstan      # PHPStan, level 8
-composer cs           # php-cs-fixer, dry run
-composer cs-fix       # apply code style
-```
-
-All three checks must pass; CI runs them on every pull request.
+- Search existing issues first.
+- For bugs: version, PHP version, minimal reproduction, expected vs. actual behaviour.
+- Security problems: **do not** open an issue — see [SECURITY.md](SECURITY.md).
 
 ## Pull requests
 
-- Branch from `main`, one topic per pull request.
-- Add or update tests for every behavior change.
-- Update `CHANGELOG.md` under "Unreleased".
-- Commit messages follow Conventional Commits: `feat: ...`, `fix: ...`, `docs: ...`.
-- Use `declare(strict_types=1);` in every PHP file.
+1. Fork, then branch from `main`.
+2. Add a test that fails without your change.
+3. Run the checks locally:
+   ```bash
+   composer test      # PHPUnit
+   composer phpstan   # PHPStan level 8
+   composer cs        # php-cs-fixer (dry run)
+   ```
+4. Keep PRs focused — one change per PR. Conventional Commits are appreciated (`fix: …`, `feat: …`).
 
-## Code of conduct
+## Code style
 
-By taking part you agree to the [Code of Conduct](CODE_OF_CONDUCT.md).
+- `declare(strict_types=1);` in every PHP file.
+- PSR-12 + Symfony rules via php-cs-fixer.
+- No generic `\Exception` / `\RuntimeException` — use a specific exception class.
+
+## Response times
+
+Issues are triaged within a few working days. Maintainer: [@Stefan39](https://github.com/Stefan39).

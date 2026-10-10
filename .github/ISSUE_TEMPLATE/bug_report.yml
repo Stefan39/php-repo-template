@@ -6,20 +6,32 @@ body:
     id: what
     attributes:
       label: What happened?
-      description: What did you expect, what did you get instead?
+      description: Expected vs. actual behaviour.
     validations:
       required: true
   - type: textarea
     id: repro
     attributes:
-      label: Steps to reproduce
-      description: Smallest code or commands that show the problem.
+      label: Minimal reproduction
+      render: php
     validations:
       required: true
   - type: input
-    id: versions
+    id: version
     attributes:
-      label: Versions
-      description: Package version, PHP version, Symfony version.
+      label: Package version
     validations:
       required: true
+  - type: input
+    id: php
+    attributes:
+      label: PHP version
+    validations:
+      required: true
+  - type: checkboxes
+    id: secrets
+    attributes:
+      label: Privacy
+      options:
+        - label: I removed API keys, tokens and personal data from this report.
+          required: true
